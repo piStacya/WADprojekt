@@ -1,8 +1,26 @@
 body {
     background-color: black;
+    /*cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="white"/><circle cx="16" cy="16" r="16" fill="none" stroke="white" stroke-width="1" opacity="0.5"/></svg>'), auto;
+    */
+    cursor: none;
 }
 
 
+.glow-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    mix-blend-mode: screen;
+    transition: width 0.3s, height 0.3s;
+    -webkit-transition: width 0.3s, height 0.3s;
+    -moz-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+}
 
 .main {
     display: flex;
